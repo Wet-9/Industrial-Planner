@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Goal
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let goal of goals">
+      {{ goal.name }}<br>
+      {{ goal.description }}<br>
+      Deadline: {{ goal.deadline }}
+      <ion-checkbox slot="start" (ionChange)="goalDone($event, goal)"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="full" routerLink="/add-goal">Add New Goal</ion-button>
+</ion-content>

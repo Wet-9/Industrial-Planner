@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Add Task</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <!-- Name -->
+    <ion-item>
+      <ion-label position="stacked">Name</ion-label>
+      <ion-input [(ngModel)]="task.name"></ion-input>
+    </ion-item>
+
+    <!-- Description -->
+    <ion-item>
+      <ion-label position="stacked">Description</ion-label>
+      <ion-input [(ngModel)]="task.description"></ion-input>
+    </ion-item>
+
+    <!-- Start Date/Time -->
+    <ion-item>
+      <ion-label position="stacked">Start Time</ion-label>
+      <ion-input [(ngModel)]="task.date_of_start" type="datetime-local"></ion-input>
+    </ion-item>
+
+    <!-- End Date/Time -->
+    <ion-item>
+      <ion-label position="stacked">End Time</ion-label>
+      <ion-input [(ngModel)]="task.date_of_end" type="datetime-local"></ion-input>
+    </ion-item>
+
+    <!-- Status -->
+    <ion-item>
+      <ion-label>Status (Done/Not Done)</ion-label>
+      <ion-toggle [(ngModel)]="task.status"></ion-toggle>
+    </ion-item>
+
+    <!-- Add Task Button -->
+    <ion-item>
+      <ion-button expand="full" (click)="addTask()">Add Task</ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

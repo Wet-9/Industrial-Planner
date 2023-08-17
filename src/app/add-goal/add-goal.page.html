@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Add Goal</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label position="stacked">Name</ion-label>
+      <ion-input [(ngModel)]="goal.name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Description</ion-label>
+      <ion-input [(ngModel)]="goal.description"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Deadline</ion-label>
+      <ion-input [(ngModel)]="goal.deadline"></ion-input>
+    </ion-item>
+    <ion-button expand="full" (click)="addGoal()">Add Goal</ion-button>
+  </ion-list>
+</ion-content>
